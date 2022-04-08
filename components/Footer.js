@@ -46,14 +46,9 @@ const Footer = () => {
           </li>
         </ul>
 
-        <div className='flex flex-col items-center'>
-          <p className="subtitle_md text-[#797980] text-center flex items-center justify-center">By
-            <a href="#" className='hover:underline mx-1'>Clean Tonic</a>
-            ©2021 I Made with
-            <span className='mx-1'>
-              <FaHeart />
-            </span>
-            in Rennes City</p>
+        <div className='flex flex-col items-center container'>
+          <p className="subtitle_md text-[#797980] text-center ">By <a href="#" className='hover:underline mx-1'>Clean Tonic</a>
+            ©2021 I Made with <span><FaHeart className='inline' /></span> in Rennes City</p>
 
           <a href="#" className='text-[#797980] hover:underline'>Mentions légales</a>
         </div>

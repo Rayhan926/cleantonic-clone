@@ -8,7 +8,7 @@ const VehicleTypeCard = ({ isSelected, onSelect, data }) => {
       onClick={() => onSelect(data)}
     >
       <div className={cx("cbs-vehicle-icon", data.iconClass)}></div>
-      <h6>{data.title}</h6>
+      <h6 className='text-center text-[15px]' >{data.title}</h6>
     </div>
   )
 }

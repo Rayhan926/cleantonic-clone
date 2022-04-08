@@ -6,7 +6,7 @@
 
 @layer components{
     .container{
-        @apply xl:max-w-[1190px] mx-auto px-6 xl:px-5;
+        @apply sm:px-2 xl:max-w-[1190px] mx-auto;
     }
     .title_lg{
         @apply  font-roboto-slab text-[29px] leading-[60px] md:text-[48px] md:leading-[60px] text-dark font-extrabold;
@@ -26,6 +26,17 @@
     ._btn{
         @apply border-2 border-primary text-primary rounded-full px-[30px] py-[14px] text-[15px] leading-[15px] hover:text-white hover:bg-primary cursor-pointer;
     }
+}
+@media (max-width:420px) {
+	.container{
+		width: 300px;
+	}
+}
+
+@layer utilities{
+	.nav_hover_shadow{
+		text-shadow: 0 0 0.2em #00f2ff !important
+	}
 }
 
 

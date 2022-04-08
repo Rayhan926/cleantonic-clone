@@ -59,24 +59,24 @@ const OptionsSection = () => {
 
           {
             options.map(({ title, time, price }, i) => (
-              <div className='grid grid-cols-[55%,15%,15%,15%] py-3 px-5 border border-t-0 first:border-t border-border-gray' key={i}>
+              <div className='flex flex-wrap justify-center space-y-2.5 lg:space-y-0 lg:grid lg:grid-cols-[55%,15%,15%,15%] py-3 px-5 border border-t-0 first:border-t border-border-gray' key={i}>
 
-                <div className="flex items-center">
-                  <p className="subtitle_sm text-dark">{title}
+                <div className="flex items-center w-full">
+                  <p className="subtitle_sm text-dark text-center w-full lg:text-left">{title}
                   </p>
                 </div>
 
-                <div className="flex justify-center items-center text-soft-dark">
+                <div className="w-1/2 lg:w-full flex justify-end pr-2 lg:p-0 lg:justify-center items-center text-soft-dark">
                   <span className="cbs-meta-icon cbs-meta-icon-duration mr-1"></span>
                   <span className="subtitle_sm">{time}</span>
                 </div>
 
-                <div className="flex justify-center items-center text-soft-dark">
+                <div className="w-1/2 lg:w-full flex justify-start pl-2 lg:p-0 lg:justify-center items-center text-soft-dark">
                   <span className="cbs-meta-icon cbs-meta-icon-price mr-1"></span>
                   <span className="subtitle_sm">{price} €</span>
                 </div>
 
-                <div className='flex justify-end'>
+                <div className='flex justify-end !mt-4 lg:!mt-0'>
                   <button className="_btn">Sélectionner</button>
                 </div>
 

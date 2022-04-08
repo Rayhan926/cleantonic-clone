@@ -7,9 +7,9 @@ const VehicleTypeHelpModal = ({ isOpen, onClose }) => {
     <>
       <Modal isOpen={isOpen} onRequestClose={onClose} style={modalStyles} preventScroll>
         <div className="w-[95vw] md:w-[80vw] mx-auto bg-white p-5 pb-7 md:px-10 md:py-8 md:pb-12">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-start sm:items-center gap-10">
             <h5 className="title_sm">Aide pour choisir votre type de véhicule</h5>
-            <button onClick={onClose} className='w-11 h-11 flex items-center justify-center hover:bg-border-gray/50 duration-150 -mr-3'>
+            <button onClick={onClose} className='w-11 h-11 flex items-center justify-center hover:bg-border-gray/50 duration-150 md:-mr-3'>
               <IoMdClose size={25} />
             </button>
           </div>

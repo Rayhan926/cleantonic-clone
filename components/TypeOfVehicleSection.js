@@ -47,7 +47,7 @@ const TypeOfVehicleSection = () => {
                     <VehicleTypeHelpModal isOpen={isOpenModal} onClose={closeModalHandler} />
 
                     {/* Vehicle Types Grid --Start-- */}
-                    <div className="grid grid-cols-4 gap-3 mt-3">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                         {
                             vehicleTypes.map((vehicleType, index) => (
                                 <VehicleTypeCard data={vehicleType} isSelected={selected === vehicleType.value} onSelect={(vehicle_type) => setSelected(vehicle_type.value)} key={index} />

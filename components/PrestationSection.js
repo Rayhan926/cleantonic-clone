@@ -56,7 +56,7 @@ const PrestationSection = () => {
         <StepHeader title={"PRESTATION"} subtitle={"QUEL NETTOYAGE SOUHAITEZ-VOUS ?"} currentStep={2} totalStep={5} />
 
         <div className="mt-[50px]">
-          <div className="grid grid-cols-3 gap-[30px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
             {cards.map((card, i) => (
               <PrestationCard {...card} key={i} />
             ))}

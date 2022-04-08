@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import CalenderSection from '../components/CalenderSection'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 import HeroSection from '../components/HeroSection'
 import OptionsSection from '../components/OptionsSection'
 import PrestationSection from '../components/PrestationSection'
@@ -16,6 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <main>
         <HeroSection />
         <TypeOfVehicleSection />
@@ -23,8 +25,8 @@ export default function Home() {
         <OptionsSection />
         <CalenderSection />
         <ReservationSection />
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }

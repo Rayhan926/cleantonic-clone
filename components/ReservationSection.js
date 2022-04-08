@@ -36,7 +36,7 @@ const ReservationSection = () => {
           totalStep={5}
         />
 
-        <div className="mt-[50px] grid grid-cols-2 gap-[30px]">
+        <div className="mt-[50px] grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {
             reservationItems.map((reservationItem, i) => (
               <ReservationItem {...reservationItem} key={i} />
@@ -44,7 +44,7 @@ const ReservationSection = () => {
           }
         </div>
 
-        <div className='flex items-center justify-center mt-[30px] gap-3' >
+        <div className='flex flex-wrap items-center justify-center mt-[30px] gap-3' >
           <button className="_btn">S'identifier</button>
           <span className='text-dark'>ou</span>
           <button className='_btn' >Créer un compte</button>
