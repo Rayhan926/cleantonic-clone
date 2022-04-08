@@ -12,6 +12,7 @@ export const modalStyles = {
     backgroundColor: "transparent",
     boxShadow: "none",
     borderRadius: 0,
+    overflow: 'visible'
   },
   overlay: {
     backgroundColor: "rgba(0,0,0,0.4)",

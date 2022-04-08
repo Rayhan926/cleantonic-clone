@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import LoginAndRegistrationModal from './LoginAndRegistrationModal';
 import ReservationItem from './ReservationItem';
 import StepHeader from './StepHeader'
 
@@ -26,6 +27,9 @@ const reservationItems = [
 ]
 
 const ReservationSection = () => {
+
+  const [activeScreen, setActiveScreen] = useState(null)
+
   return (
     <section className='mt-20 pb-[120px]' >
       <div className="container">
@@ -45,9 +49,15 @@ const ReservationSection = () => {
         </div>
 
         <div className='flex flex-wrap items-center justify-center mt-[30px] gap-3' >
-          <button className="_btn">S'identifier</button>
+          <button onClick={() => setActiveScreen(0)} className="_btn">S'identifier</button>
           <span className='text-dark'>ou</span>
-          <button className='_btn' >Créer un compte</button>
+          <button onClick={() => setActiveScreen(1)} className='_btn' >Créer un compte</button>
+
+          <LoginAndRegistrationModal
+            isOpen={activeScreen !== null}
+            onClose={() => setActiveScreen(null)}
+            defaultActiveScreen={activeScreen}
+          />
         </div>
       </div>
     </section>
