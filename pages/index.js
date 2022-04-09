@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import CalenderSection from '../components/CalenderSection'
+import CommandeEnCoursForm from '../components/CommandeEnCoursForm'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeroSection from '../components/HeroSection'
+import MyProfileForm from '../components/MyProfileForm'
 import OptionsSection from '../components/OptionsSection'
+import PendingOrderAndMyProfileFormSwitcher from '../components/PendingOrderAndMyProfileFormSwitcher'
 import PrestationSection from '../components/PrestationSection'
 import ReservationSection from '../components/ReservationSection'
 import TypeOfVehicleSection from '../components/TypeOfVehicleSection'
@@ -25,6 +28,12 @@ export default function Home() {
         <OptionsSection />
         <CalenderSection />
         <ReservationSection />
+        {/* <div className="container my-20">
+          <CommandeEnCoursForm />
+          <MyProfileForm />
+        </div> */}
+
+        <PendingOrderAndMyProfileFormSwitcher />
       </main>
       <Footer />
     </>

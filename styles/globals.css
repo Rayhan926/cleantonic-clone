@@ -1,351 +1,326 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .container{
-        @apply sm:px-2 xl:max-w-[1190px] mx-auto;
-    }
-    .title_lg{
-        @apply  font-roboto-slab text-[29px] leading-[60px] md:text-[48px] md:leading-[60px] text-dark font-extrabold;
-    }
-    .title_md{
-        @apply  font-roboto-slab text-[22px] leading-[40px] md:text-[29px] md:leading-[40px] text-dark font-extrabold;
-    }
-    .title_sm{
-        @apply  font-roboto-slab text-[21px] leading-[32px] text-dark font-extrabold;
-    }
-    .subtitle_md{
-        @apply font-sans text-base !leading-[28px] text-soft-dark font-normal;
-    }
-    .subtitle_sm{
-        @apply font-sans text-[15px] !leading-[23px] text-soft-dark font-normal;
-    }
-    ._btn{
-        @apply border-2 border-primary text-primary rounded-full px-[30px] py-[14px] text-[15px] leading-[15px] hover:text-white hover:bg-primary cursor-pointer duration-100;
-    }
+@layer components {
+  .container {
+    @apply sm:px-2 xl:max-w-[1190px] mx-auto;
+  }
+  .title_lg {
+    @apply font-roboto-slab text-[29px] leading-[60px] md:text-[48px] md:leading-[60px] text-dark font-extrabold;
+  }
+  .title_md {
+    @apply font-roboto-slab text-[22px] leading-[40px] md:text-[29px] md:leading-[40px] text-dark font-extrabold;
+  }
+  .title_sm {
+    @apply font-roboto-slab text-[21px] leading-[32px] text-dark font-extrabold;
+  }
+  .subtitle_md {
+    @apply font-sans text-base !leading-[28px] text-soft-dark font-normal;
+  }
+  .subtitle_sm {
+    @apply font-sans text-[15px] !leading-[23px] text-soft-dark font-normal;
+  }
+  ._btn {
+    @apply border-2 border-primary text-primary rounded-full px-[30px] py-[14px] text-[15px] leading-[15px] hover:text-white hover:bg-primary cursor-pointer duration-100;
+  }
+  ._box_input {
+    @apply py-2.5 border-none outline-none block w-full text-[15px] text-soft-dark focus:bg-[#FBFAFC];
+  }
+  ._wrapper_label {
+    @apply block w-full p-[15px] border-border-gray;
+  }
 }
-@media (max-width:420px) {
-	.container{
-		width: 300px;
-	}
+@media (max-width: 420px) {
+  .container {
+    width: 300px;
+  }
 }
 
-@layer utilities{
-	.nav_hover_shadow{
-		text-shadow: 0 0 0.2em #00f2ff !important
-	}
+@layer utilities {
+  .nav_hover_shadow {
+    text-shadow: 0 0 0.2em #00f2ff !important;
+  }
 }
-
-
 
 /******************************************************************************/
 /* Icon																		  */
 /******************************************************************************/
 
-	/**************************************************************************/
-	/* Icon / Meta															  */
-	/**************************************************************************/
+/**************************************************************************/
+/* Icon / Meta															  */
+/**************************************************************************/
 
-	@font-face 
-	{
-		font-family:'cbs-meta-icon';
-		src:url('../public/font/cbs-meta.ttf');
-		font-weight:normal;
-		font-style:normal;
-	}
+@font-face {
+  font-family: "cbs-meta-icon";
+  src: url("../public/font/cbs-meta.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
-	.cbs-button:before,
-	.cbs-meta-icon
-	{
-		font-family:'cbs-meta-icon' !important;
-		speak:none;
-		font-style:normal;
-		font-weight:normal;
-		font-variant:normal;
-		text-transform:none;
-		line-height:1;
-		-webkit-font-smoothing:antialiased;
-		-moz-osx-font-smoothing:grayscale;
-	}
+.cbs-button:before,
+.cbs-meta-icon {
+  font-family: "cbs-meta-icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-	.cbs-button:before,
-	.cbs-meta-icon-check:before 
-	{
-		content:"\65";
-		font-size:16px;
-	}
-	.cbs-meta-icon-total-price:before 
-	{
-		content:"\69";
-		font-size:48px;
-	}
-	.cbs-meta-icon-date:before 
-	{
-		content:"\66";
-		font-size:48px;
-	}
-	.cbs-meta-icon-time:before 
-	{
-		content:"\67";
-		font-size:48px;
-	}
-	.cbs-meta-icon-total-duration:before 
-	{
-		content:"\68";
-		font-size:48px;
-	}
-	.cbs-meta-icon-duration:before 
-	{
-		content:"\61";
-		font-size:18px;
-		top:2px;
-		margin-right:4px;
-		position:relative;
-	}
-	.cbs-meta-icon-arrow-horizontal:before 
-	{
-		content:"\64";
-		font-size:18px;
-		top:2px;
-		position:relative;
-	}
-	.cbs-meta-icon-price:before 
-	{
-		content:"\62";
-		font-size:18px;
-		top:2px;
-		margin-right:4px;
-		position:relative;
-	}
-	.cbs-meta-icon-arrow-vertical:before 
-	{
-		content:"\63";
-		font-size:18px;
-	}
-	.cbs-meta-icon-success:before 
-	{
-		content:"\6a";
-		color:#59AC49;
-		font-size:48px;
-	}
-	.cbs-meta-icon-error:before 
-	{
-		content:"\6b";
-		color:#BD432D;
-		font-size:48px;
-	}
-	
-	.cbs-meta-icon-date:before,
-	.cbs-meta-icon-time:before,
-	.cbs-meta-icon-total-price:before,
-	.cbs-meta-icon-total-duration:before
-	{
-		top:10px;
-		position:relative;
-	}
+.cbs-button:before,
+.cbs-meta-icon-check:before {
+  content: "\65";
+  font-size: 16px;
+}
+.cbs-meta-icon-total-price:before {
+  content: "\69";
+  font-size: 48px;
+}
+.cbs-meta-icon-date:before {
+  content: "\66";
+  font-size: 48px;
+}
+.cbs-meta-icon-time:before {
+  content: "\67";
+  font-size: 48px;
+}
+.cbs-meta-icon-total-duration:before {
+  content: "\68";
+  font-size: 48px;
+}
+.cbs-meta-icon-duration:before {
+  content: "\61";
+  font-size: 18px;
+  top: 2px;
+  margin-right: 4px;
+  position: relative;
+}
+.cbs-meta-icon-arrow-horizontal:before {
+  content: "\64";
+  font-size: 18px;
+  top: 2px;
+  position: relative;
+}
+.cbs-meta-icon-price:before {
+  content: "\62";
+  font-size: 18px;
+  top: 2px;
+  margin-right: 4px;
+  position: relative;
+}
+.cbs-meta-icon-arrow-vertical:before {
+  content: "\63";
+  font-size: 18px;
+}
+.cbs-meta-icon-success:before {
+  content: "\6a";
+  color: #59ac49;
+  font-size: 48px;
+}
+.cbs-meta-icon-error:before {
+  content: "\6b";
+  color: #bd432d;
+  font-size: 48px;
+}
 
-	/**************************************************************************/
-	/* Vehicle icon															  */
-	/**************************************************************************/
+.cbs-meta-icon-date:before,
+.cbs-meta-icon-time:before,
+.cbs-meta-icon-total-price:before,
+.cbs-meta-icon-total-duration:before {
+  top: 10px;
+  position: relative;
+}
 
-	@font-face 
-	{
-		font-family:'cbs-vehicle';
-		src:url('../public/font/cbs-vehicle.ttf');
-		font-weight:normal;
-		font-style:normal;
-	}
+/**************************************************************************/
+/* Vehicle icon															  */
+/**************************************************************************/
 
-	.cbs-vehicle-icon 
-	{
-		font-family:'cbs-vehicle' !important;
-		speak:none;
-		font-style:normal;
-		font-weight:normal;
-		font-variant:normal;
-		text-transform:none;
-		line-height:1;
-		-webkit-font-smoothing:antialiased;
-		-moz-osx-font-smoothing:grayscale;
-	}
+@font-face {
+  font-family: "cbs-vehicle";
+  src: url("../public/font/cbs-vehicle.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
-	.cbs-vehicle-icon-jetski:before 
-	{
-		content:"\79";
-		font-size:28px;
-	}
-	.cbs-vehicle-icon-boat:before 
-	{
-		content:"\78";
-		font-size:30px;
-	}
-	.cbs-vehicle-icon-quad:before 
-	{
-		content:"\75";
-		font-size:61px;
-	}
-	.cbs-vehicle-icon-trailer:before 
-	{
-		content:"\74";
-		font-size:23px;
-	}
-	.cbs-vehicle-icon-bicycle:before 
-	{
-		content:"\77";
-		font-size:41px;
-	}
-	.cbs-vehicle-icon-motorcycle:before 
-	{
-		content:"\76";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-mini-car:before 
-	{
-		content:"\61";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-small-car:before 
-	{
-		content:"\62";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-pickup:before 
-	{
-		content:"\67";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-limousine:before 
-	{
-		content:"\68";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-4x4:before 
-	{
-		content:"\66";
-		font-size:61px;
-	}
-	.cbs-vehicle-icon-car-mid-size:before 
-	{
-		content:"\63";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-truck-mid-size:before 
-	{
-		content:"\6b";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-truck:before 
-	{
-		content:"\6c";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-double-decker:before 
-	{
-		content:"\70";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-bus:before 
-	{
-		content:"\6f";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-van:before 
-	{
-		content:"\69";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-midibus:before 
-	{
-		content:"\6e";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-heavy-equipment:before 
-	{
-		content:"\71";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-station-wagon:before 
-	{
-		content:"\64";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-suv:before 
-	{
-		content:"\65";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-truck-large:before 
-	{
-		content:"\72";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-minibus:before 
-	{
-		content:"\6d";
-		font-size:60px;
-	}
-	.cbs-main .cbs-main-list,
-	.cbs-vehicle-icon-caravan:before 
-	{
-		content:"\73";
-		font-size:60px;
-	}
-	.cbs-vehicle-icon-minivan:before 
-	{
-		content:"\6a";
-		font-size:60px;
-	}
+.cbs-vehicle-icon {
+  font-family: "cbs-vehicle" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-	.react-images__view{
-		display: flex;
-		justify-content: center;
-	}
+.cbs-vehicle-icon-jetski:before {
+  content: "\79";
+  font-size: 28px;
+}
+.cbs-vehicle-icon-boat:before {
+  content: "\78";
+  font-size: 30px;
+}
+.cbs-vehicle-icon-quad:before {
+  content: "\75";
+  font-size: 61px;
+}
+.cbs-vehicle-icon-trailer:before {
+  content: "\74";
+  font-size: 23px;
+}
+.cbs-vehicle-icon-bicycle:before {
+  content: "\77";
+  font-size: 41px;
+}
+.cbs-vehicle-icon-motorcycle:before {
+  content: "\76";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-mini-car:before {
+  content: "\61";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-small-car:before {
+  content: "\62";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-pickup:before {
+  content: "\67";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-limousine:before {
+  content: "\68";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-4x4:before {
+  content: "\66";
+  font-size: 61px;
+}
+.cbs-vehicle-icon-car-mid-size:before {
+  content: "\63";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-truck-mid-size:before {
+  content: "\6b";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-truck:before {
+  content: "\6c";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-double-decker:before {
+  content: "\70";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-bus:before {
+  content: "\6f";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-van:before {
+  content: "\69";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-midibus:before {
+  content: "\6e";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-heavy-equipment:before {
+  content: "\71";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-station-wagon:before {
+  content: "\64";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-suv:before {
+  content: "\65";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-truck-large:before {
+  content: "\72";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-minibus:before {
+  content: "\6d";
+  font-size: 60px;
+}
+.cbs-main .cbs-main-list,
+.cbs-vehicle-icon-caravan:before {
+  content: "\73";
+  font-size: 60px;
+}
+.cbs-vehicle-icon-minivan:before {
+  content: "\6a";
+  font-size: 60px;
+}
 
-	.animation_scale{
-		animation: animation_scale 0.35s ease-in-out;
-	}
-	.animation_scale_reverse{
-		animation: animation_scale_reverse 0.35s ease-in-out;
-	}
+.react-images__view {
+  display: flex;
+  justify-content: center;
+}
 
-	@keyframes animation_scale {
-		0%{
-			opacity: 0.8;
-			transform: scale(0.8) translateY(50px);
-		}
-		100%{
-			opacity: 1;
-			transform: scale(1) translateY(0px);
-		}
-	}
+.animation_scale {
+  animation: animation_scale 0.35s ease-in-out;
+}
+.animation_scale_reverse {
+  animation: animation_scale_reverse 0.35s ease-in-out;
+}
 
-	@keyframes animation_scale_reverse {
-		0%{
-			opacity: 1;
-			transform: translateY(0px);
-		}
-		100%{
-			opacity: 0.8;
-			transform: translateY(-80px);
-		}
-	}
+@keyframes animation_scale {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.8) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+@keyframes animation_scale_reverse {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(-80px);
+  }
+}
 
 .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
-.ReactModal__Overlay--after-open{
-    opacity: 1;
+.ReactModal__Overlay--after-open {
+  opacity: 1;
 }
 
-.ReactModal__Overlay--before-close{
-    opacity: 0;
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }
 
-	.ReactModal__Body--open{
-		@apply overflow-hidden;
-	}
+.ReactModal__Body--open {
+  @apply overflow-hidden;
+}
+._checkbox {
+  @apply sr-only opacity-0 pointer-events-none;
+}
+._checkbox_wrapper {
+  @apply w-[30px] h-[30px] border-2 border-border-gray flex items-center justify-center cursor-pointer;
+}
+._checkbox_inner {
+  @apply hidden;
+}
+._checkbox:checked + ._checkbox_wrapper ._checkbox_inner {
+  @apply block;
+}
